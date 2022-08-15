@@ -2,11 +2,10 @@ package org.generation.app.controller;
 
 import java.util.List;
 
-import org.generation.app.entity.Product;
-import org.generation.app.service.IProductService;
+import org.generation.app.entity.Role;
+import org.generation.app.service.IRolesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,35 +20,30 @@ import org.springframework.web.bind.annotation.RestController;
 public class RolesRestController {
 	
 	@Autowired
-	IProductService productService;
+	IRolesService orderService;
 	
-	@GetMapping("/products") //localhost:puerto/api/orders
-	public List<Product> products(){
-		return (List<Product>) productService.findAllProducts();		
+	@GetMapping("/roles") //localhost:puerto/api/orders
+	public List<Role> roles(){
+		return (List<Role>) orderService.findAllRoles();		
 	}
 	
-	@GetMapping("/products/{id}")
-	public Product productById(@PathVariable Long id) {		
-		return productService.findProductById(id);
+	@GetMapping("/roles/{id}")
+	public Role productById(@PathVariable Long id) {		
+		return orderService.findRolById(id);
 	}
 	
-	@PostMapping("/products")
-	public Product newProduct(@RequestBody Product product) {
-		product.setProductId(null);
-		return productService.saveProduct(product);
+	@PostMapping("/roles")
+	public Role newRole(@RequestBody Role rol) {
+		rol.setRoleId(null);
+		return orderService.saveRol(rol);
 	}
 	
-	@PutMapping("/products")
-	public Product replaceOrder(@RequestBody Product product) {
+	@PutMapping("/roles")
+	public Role replaceOrder(@RequestBody Role rol) {
 		//Filtros para asegurar que esté un ID y exista
-		return productService.saveProduct(product);
+		return orderService.saveRol(rol);
 	}
 	
-	@DeleteMapping("products/{id}")
-	public Product byeProduct(@PathVariable Long id) {
-		return productService.deleteProductById(id);
-	}
-
 	
 
 }
