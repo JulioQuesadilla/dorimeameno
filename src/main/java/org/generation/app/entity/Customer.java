@@ -1,29 +1,31 @@
 package org.generation.app.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
 
 @Entity
 @Data
-public class Customer {
-	
-	private String firstName; //columna: first_name
-	@Id //pk
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id_customer;	
+@Table(name="customer_data")
+public class Customer implements Serializable{ 
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long idCustomer; //id_customer
+	@Column(name="first_name")
+	private String firstName; //first_name
 	private String lastName;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private Role role;
 	
-	public Customer() {
-		
-	}
-	
-	public Customer(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
+//	@OneToMany
+//	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+//	private List<Order> orders;
 	
 }
