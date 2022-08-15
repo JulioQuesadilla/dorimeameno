@@ -53,7 +53,7 @@ INSERT INTO customer_data (first_name, last_name) VALUES('Emmett', 'Brown');
 
 INSERT INTO customer_data (first_name, last_name) VALUES('Pedro', 'Navajas');
 
-
+/*
 INSERT INTO `product` (`description`, `price`) VALUES ('Guitarra ameno', '1500');
 INSERT INTO `product` (`description`, `price`) VALUES ('Cibersecurity for dummies', '500');
 INSERT INTO `product` (`description`, `price`) VALUES ('Laptop lenovo', '4000');
@@ -74,6 +74,7 @@ INSERT INTO `customer_order` (`description`, `status`, `customer_id_customer`) V
 INSERT INTO `customer_order` (`description`, `status`, `customer_id_customer`) VALUES ('Venta del miércoles 26/03', 'Vendido', '8');
 INSERT INTO `customer_order` (`description`, `status`, `customer_id_customer`) VALUES ('Venta del miércoles 26/03', 'En tránsito', '11');
 INSERT INTO `customer_order` (`description`, `status`, `customer_id_customer`) VALUES ('Venta del jueves 27/03', 'En tránsito', '17');
+*/
 /*
 INSERT INTO `customer_order_products` (`order_order_id`, `products_product_id`) VALUES ('1', '1');
 INSERT INTO `customer_order_products` (`order_order_id`, `products_product_id`) VALUES ('2', '3');
