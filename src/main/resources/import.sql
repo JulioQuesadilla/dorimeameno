@@ -74,7 +74,7 @@ INSERT INTO `customer_order` (`description`, `status`, `customer_id_customer`) V
 INSERT INTO `customer_order` (`description`, `status`, `customer_id_customer`) VALUES ('Venta del miércoles 26/03', 'Vendido', '8');
 INSERT INTO `customer_order` (`description`, `status`, `customer_id_customer`) VALUES ('Venta del miércoles 26/03', 'En tránsito', '11');
 INSERT INTO `customer_order` (`description`, `status`, `customer_id_customer`) VALUES ('Venta del jueves 27/03', 'En tránsito', '17');
-
+/*
 INSERT INTO `customer_order_products` (`order_order_id`, `products_product_id`) VALUES ('1', '1');
 INSERT INTO `customer_order_products` (`order_order_id`, `products_product_id`) VALUES ('2', '3');
 INSERT INTO `customer_order_products` (`order_order_id`, `products_product_id`) VALUES ('2', '5');
@@ -95,5 +95,6 @@ INSERT INTO customer_order_products (order_order_id, products_product_id) VALUES
 INSERT INTO customer_order_products (order_order_id, products_product_id) VALUES (4,3);
 INSERT INTO customer_order_products (order_order_id, products_product_id) VALUES (5,2);
 INSERT INTO customer_order_products (order_order_id, products_product_id) VALUES (5,3);
+*/
 
 
