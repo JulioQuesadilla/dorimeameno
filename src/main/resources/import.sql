@@ -63,9 +63,9 @@ INSERT INTO `product` (`description`, `price`) VALUES ('Camisita fachera', '400'
 INSERT INTO `product` (`description`, `price`) VALUES ('Torta de jaiba', '15');
 INSERT INTO `product` (`description`, `price`) VALUES ('Delfin greenpeace', '100');
 
-INSERT INTO `role` (`description`, `role_type`) VALUES ('La persona más owner', 'owner');
-INSERT INTO `role` (`description`, `role_type`) VALUES ('El talento es importante en una empresa', 'empleadx');
-INSERT INTO `role` (`description`, `role_type`) VALUES ('El cliente siempre tiene la razoooó', 'cliente');
+INSERT INTO `customer_roles` (`description`, `role_type`) VALUES ('La persona más owner', 'owner');
+INSERT INTO `customer_roles` (`description`, `role_type`) VALUES ('El talento es importante en una empresa', 'empleadx');
+INSERT INTO `customer_roles` (`description`, `role_type`) VALUES ('El cliente siempre tiene la razoooó', 'cliente');
 
 
 INSERT INTO `customer_order` (`description`, `status`, `customer_id_customer`) VALUES ('Venta del lunes 24/03', 'Vendido', '3');
@@ -86,7 +86,7 @@ INSERT INTO `customer_order_products` (`order_order_id`, `products_product_id`) 
 INSERT INTO `customer_order_products` (`order_order_id`, `products_product_id`) VALUES ('6', '4');
 INSERT INTO `customer_order_products` (`order_order_id`, `products_product_id`) VALUES ('6', '1');
 
-/*  */
+
 INSERT INTO customer_order_products (order_order_id, products_product_id) VALUES (1,1);
 INSERT INTO customer_order_products (order_order_id, products_product_id) VALUES (1,2);
 INSERT INTO customer_order_products (order_order_id, products_product_id) VALUES (1,3);
